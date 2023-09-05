@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Ropa</title>
+  <!-- Enlace a Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Enlace a FontAwesome para los iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    /* Estilos adicionales personalizados */
+    /* Puedes agregar tus estilos personalizados aquí */
+    body {
+      font-family: 'Georgia', serif; /* Cambia al tipo de letra que desees */
+    }
+
+    .navbar {
+      background-color: #FF69B4; /* Cambia el color a rosado según tu preferencia */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    }
+
+    .navbar-brand {
+      font-size: 24px; /* Tamaño de la fuente del logo */
+      color: #fff; /* Color del texto del logo */
+      font-weight: bold; /* Negrita */
+    }
+
+    .navbar-toggler-icon {
+      background-color: #fff; /* Color del icono del botón de menú */
+    }
+
+    .nav-link {
+      color: #000000 !important; /* Color del texto de los enlaces */
+      font-weight: bold; /* Negrita */
+    }
+
+    .hero-image {
+      position: relative;
+      height: 100vh; /* Ajusta la altura de la imagen según sea necesario */
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .footer-pink {
+      background-color: #933664; /* Cambia el color a rosado según tu preferencia */
+    }
+   /* Cambiar el color de los iconos a rosado */
+   .icono-rosado {
+      color: #933664; /* Cambiar el color según tu preferencia */
+    }
+   
+    /* Animación para cambiar la imagen de portada */
+    @keyframes changeImage {
+      0%, 100% {
+        background-image: url(portada1.jpg);
+      }
+      50% {
+        background-image: url(portada2.jpg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #933664;">
+    <a class="navbar-brand" href="#">Latinas Design</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#acerca">Acerca de nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#productos">Productos más top</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#descuentos">Descuentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#catalogo">Catálogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#redes">Redes Sociales</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#modalCarrito">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Portada -->
+  <div class="hero-image d-flex justify-content-center align-items-center" style="animation: changeImage 6s infinite;">
+    <!-- Contenido opcional centrado en la imagen de portada -->
+    <h1 class="text-white text-center" style="font-family: 'Arial', sans-serif;">Bienvenido a nuestra tienda de ropa</h1>
+  </div>
+
+  <!-- Sección Acerca de nosotros -->
+  <section id="acerca" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 d-flex align-items-center">
+          <div>
+            <h2>Latinas Design</h2>
+            <p>  Latinas Design es una marca 100% boliviana, que se preocupa por llevar en alto el nombre de nuestra querida patria.
+                 Apoyando el talento de nuestra gente en la elaboración de nuestras prendas, ofreciendo calidad y felicidad a 
+                 nuestros clientes.</p>
+             <h2>Misión</h2>
+                <p>  Nuestra misión en Latinas Design es ser la voz de la creatividad y el talento de Bolivia en el mundo de la moda. 
+                    Como una marca 100% boliviana🇧🇴, nos esforzamos por elevar el nombre de nuestra patria, colaborando con la mano de obra local para crear prendas únicas y auténticas.
+                    A través de nuestra dedicación a la calidad y la atención a los detalles. Nuestro propósito es llenar la vida de nuestros clientes con la satisfacción y el orgullo 
+                    de ser parte de esta historia de pasión y compromiso.</p>
+             <h2>Visión</h2>
+                    <p>  Nuestra visión en Latinas Design es ser reconocidos a nivel nacional e internacional como un referente de moda
+                         y excelencia en diseño, representando los valores y la belleza de Bolivia en cada prenda que creamos.
+                          Deseamos trascender como una marca que inspira y conecta a las personas con la autenticidad de nuestra cultura 
+                          y el talento de nuestra gente.Y estableciendo una conexión emocional duradera con nuestros clientes.</p>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+          <img src="logo.jpg" alt="Logo de Latinas Design" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Top de productos -->
+  <section id="productos" class="py-5 text-center bg-light">
+    <div class="container">
+      <h2>Productos más top</h2>
+      <p>¡Mira los producto más vendidos en esta temporada!</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="producto1.jpg" class="card-img-top" alt="Producto 1">
+            <div class="card-body">
+              <h5 class="card-title">Mom jeans</h5>
+              <p class="card-text">Estos pantalones son los infaltables en todo closet, por su versatilidad y comodidad</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="producto2.jpg" class="card-img-top" alt="Producto 2">
+            <div class="card-body">
+              <h5 class="card-title">Crop top asimétrico</h5>
+              <p class="card-text">En esta temporada, los crop tops que son asimetricos son los mas buscados, que esperas para adquirir el tuyo!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="producto3.jpg" class="card-img-top" alt="Producto 3">
+            <div class="card-body">
+              <h5 class="card-title">Wide leg jeans</h5>
+              <p class="card-text">Si buscas unos pantalones que esten a la moda y que además sean súper cómodos, estos pantalones son para ti</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Descuentos -->
+  <section id="descuentos" class="py-5 text-center">
+    <div class="container">
+      <h2>Descuentos</h2>
+      <p>Descubre las promociones y descuentos especiales que tenemos para ti.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Sudaderas 3x2</h3>
+          <img src="descuentos1.jpg" alt="Descuento 1" class="img-fluid mb-3">
+          <p>Aprovecha esta super promoción y llevate 3 sudaderas y paga solo 2!</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Descuento en cardigans</h3>
+          <img src="descuentos3.jpg" alt="Descuento 2" class="img-fluid mb-3">
+          <p>Todos los cardigans con un 20% de descuento </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Catálogo -->
+  <section id="catalogo" class="py-5 text-center">
+    <div class="container">
+      <h2 class="mb-4">Catálogo</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="cat1.jpg" class="card-img-top" alt="Producto 1">
+            <div class="card-body">
+              <h5 class="card-title">Crop top "Martina"</h5>
+              <p class="card-text">Si te gusta constantemente innovar en la moda, necesitas este crop top.</p>
+              <button class="btn btn-primary agregar-carrito" data-producto="Producto 1">VER</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="cat4.jpg" class="card-img-top" alt="Producto 3">
+            <div class="card-body">
+              <h5 class="card-title">Wide leg jeans</h5>
+              <p class="card-text">Si te gusta estar a la moda y sentirte cómoda, estos jeans son lo que necesitas</p>
+              <button class="btn btn-primary agregar-carrito" data-producto="Producto 3">VER</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="cat2.jpg" class="card-img-top" alt="Producto 2">
+            <div class="card-body">
+              <h5 class="card-title">Crop top con cadenas</h5>
+              <p class="card-text">Si tu estilo es más arriesgado, este nuevo modelo es para ti.</p>
+              <button class="btn btn-primary agregar-carrito" data-producto="Producto 2">VER</button>
+            </div>
+          </div>
+        </div>
+          <!-- Fila 2 (fila adicional) -->
+        <div class="col-md-4">
+          <div class="card">
+            <img src="cat5.jpg" class="card-img-top" alt="Hoodies">
+            <div class="card-body">
+              <h5 class="card-title">Hoodies oversize</h5>
+              <p class="card-text">La prenda más versatil y cómoda que no puede faltar en tu armario.</p>
+              <button class="btn btn-primary agregar-carrito" data-producto="Producto 4">VER</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="cat6.jpg" class="card-img-top" alt="Parachute">
+            <div class="card-body">
+              <h5 class="card-title">Parachute pants</h5>
+              <p class="card-text">Los pantalones más cómodos y a que esta temporada son lo más top.</p>
+              <button class="btn btn-primary agregar-carrito" data-producto="Producto 5">VER</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="cat7.jpg" class="card-img-top" alt="Producto 6">
+            <div class="card-body">
+              <h5 class="card-title">Chaqueta oversize large</h5>
+              <p class="card-text">Las chaquetas más requeridas con un estilo retro ya llegaron en todos en</p>
+              <button class="btn btn-primary agregar-carrito" data-producto="Producto 6">VER</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal del carrito de compras -->
+  <div class="modal fade" id="modalCarrito" tabindex="-1" role="dialog" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCarritoLabel">Carrito de Compras</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Contenido del carrito de compras, puedes personalizarlo aquí -->
+          <!-- Por ejemplo, listar los productos agregados al carrito -->
+          <p>El carrito está vacío</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Realizar Compra</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección Redes Sociales -->
+  <section id="redes" class="py-5 text-center bg-light">
+    <div class="container">
+      <h2>Redes Sociales</h2>
+      <p>¡Siguenos en nuestras redes sociales para no perderte de todos los descuentos y novedades!</p>
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <a href="https://www.facebook.com/latinasdesig.bo" target="_blank"><i class="fab fa-facebook-square fa-3x icono-rosado"></i></a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://www.instagram.com/latinasdesign.bo" target="_blank"><i class="fab fa-instagram-square fa-3x icono-rosado"></i></a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://www.tiktok.com/@latinasdesign.bo" target="_blank"><i class="fab fa-tiktok fa-3x icono-rosado"></i></a>
+        </div>
+        <div class="col-md-3">
+          <a href="https://api.whatsapp.com/send?phone=+59169451551&text=Hola%2C%20quiero%20hacer%20un%20pedido." target="_blank"><i class="fab fa-whatsapp-square fa-3x icono-rosado"></i></a>
+          <p>También puedes hacer tus pedidos por acá</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer -->
+  <footer class="py-4 text-center footer-pink">
+    <div class="container">
+      <p>&copy; 2023 - Latinas Design. Todos los derechos reservados.</p>
+      <!-- Agregar enlace al aviso legal con color blanco -->
+      <a href="aviso_legal.html" class="icono-rosado" style="color: #fff;">Aviso Legal</a>
+    </div>
+  </footer>
+
+  <!-- Enlace a Bootstrap JS y scripts adicionales -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <!-- Código JavaScript para el deslizamiento automático -->
+  <script>
+    const sliderImages = document.querySelectorAll(".hero-slide");
+    let currentSlide = 0;
+
+    function changeSlide() {
+      sliderImages[currentSlide].style.opacity = "0"; // Ocultar la imagen actual
+      currentSlide = (currentSlide + 1) % sliderImages.length;
+      sliderImages[currentSlide].style.opacity = "1"; // Mostrar la nueva imagen
+    }
+
+    // Cambiar de imagen cada 5 segundos
+    setInterval(changeSlide, 5000);
+  </script>
+
+  <script>
+    // Código JavaScript para manejar el carrito de compras
+    document.addEventListener("DOMContentLoaded", function () {
+      const botonesAgregar = document.querySelectorAll(".agregar-carrito");
+
+      botonesAgregar.forEach((boton) => {
+        boton.addEventListener("click", () => {
+          const producto = boton.getAttribute("data-producto");
+          // Redirige a la página de detalles del producto
+          window.location.href = `producto.html?producto=${producto}`;
+        });
+      });
+    });
+  </script>
+
+<script>
+  // Código JavaScript para manejar el botón VER
+  document.addEventListener("DOMContentLoaded", function() {
+    const botonesVer = document.querySelectorAll(".agregar-carrito");
+
+    botonesVer.forEach((boton, index) => {
+      boton.addEventListener("click", () => {
+        const producto = boton.getAttribute("data-producto");
+        // Redirige a una página de detalles de producto específica
+        window.location.href = `producto${index + 1}.html`;
+      });
+    });
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
