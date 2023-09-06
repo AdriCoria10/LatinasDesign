@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda de Ropa</title>
+  <!-- Enlace a Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Enlace a FontAwesome para los iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <style>
+    /* Estilos adicionales personalizados */
+    /* Puedes agregar tus estilos personalizados aquí */
+    body {
+      font-family: 'Georgia', serif; /* Cambia al tipo de letra que desees */
+    }
+
+    .navbar {
+      background-color: #FF69B4; /* Cambia el color a rosado según tu preferencia */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    }
+
+    .navbar-brand {
+      font-size: 24px; /* Tamaño de la fuente del logo */
+      color: #fff; /* Color del texto del logo */
+      font-weight: bold; /* Negrita */
+    }
+
+    .navbar-toggler-icon {
+      background-color: #fff; /* Color del icono del botón de menú */
+    }
+
+    .nav-link {
+      color: #000000 !important; /* Color del texto de los enlaces */
+      font-weight: bold; /* Negrita */
+    }
+
+    .btn-primary {
+      background-color: #b34f81; /* Cambia el color a rosa según tu preferencia */
+      border-color: #933664; /* Cambia el color del borde a rosa */
+    }
+
+    /* Cambia el color del texto de los botones a negro */
+    .btn-primary {
+      color: #000000; /* Cambia el color del texto a negro */
+    }
+
+    .hero-image {
+      position: relative;
+      height: 100vh; /* Ajusta la altura de la imagen según sea necesario */
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .footer-pink {
+      background-color: #933664; /* Cambia el color a rosado según tu preferencia */
+    }
+   /* Cambiar el color de los iconos a rosado */
+   .icono-rosado {
+      color: #933664; /* Cambiar el color según tu preferencia */
+    }
+   
+    /* Animación para cambiar la imagen de portada */
+    @keyframes changeImage {
+      0%, 100% {
+        background-image: url(portada1.jpg);
+      }
+      50% {
+        background-image: url(portada2.jpg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #933664;">
+      <a class="navbar-brand" href="index.html">Latinas Design</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Acerca de nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Productos más top</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Descuentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Redes Sociales</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#modalCarrito" id="carritoLink">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+          <br>
+          <h2 class="text-center">Detalles del producto</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <img src="prod6.jpg" alt="Chaqueta" class="img-fluid">
+            </div>
+            <div class="col-md-6 align-self-center">
+              <h2 class="text-center">Chaquetas oversize large</h2>
+              <p>Esta prenda es muy versatil, ya que tiene un estilo retro y lo puedes combinar en cualquier temporada del año;
+                Además que cuenta con bolsillos internos.</p>
+              <li>
+                Tonos: Disponible en 3 tonos
+              </li>
+              <li>
+                Talla: Lo tenemos en [S], [M] y [L]
+              </li>
+              <li>
+                Precio: 200 Bs.
+              </li>
+              <br>
+              <!-- Agregar botón de "Agregar" aquí -->
+              <button class="btn btn-primary" data-toggle="modal" data-target="#mensajeModal" id="agregarProducto">Agregar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal para mostrar el mensaje del carrito -->
+      <div class="modal fade" id="modalCarrito" tabindex="-1" role="dialog" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalCarritoLabel">Carrito de Compras</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Aquí se mostrará el mensaje, inicialmente vacío -->
+              <p id="carritoMensaje"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal para mostrar el mensaje -->
+      <div class="modal fade" id="mensajeModal" tabindex="-1" role="dialog" aria-labelledby="mensajeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="mensajeModalLabel">Producto Agregado Exitosamente</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ¡El producto se ha agregado exitosamente a tu carrito de compras!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="
+
+btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+  <footer class="py-4 text-center footer-pink">
+    <div class="container">
+      <p>&copy; 2023 - Latinas Design. Todos los derechos reservados.</p>
+      <!-- Agregar enlace al aviso legal con color blanco -->
+      <a href="aviso_legal.html" class="icono-rosado" style="color: #fff;">Aviso Legal</a>
+    </div>
+  </footer>
+
+  <!-- Enlace a Bootstrap JS y scripts adicionales -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript para actualizar el mensaje del carrito -->
+  <script>
+    // Función para mostrar el modal del carrito de compras al hacer clic
+    document.getElementById('carritoLink').addEventListener('click', function () {
+      $('#modalCarrito').modal('show');
+    });
+
+    // Función para agregar un producto y actualizar el mensaje del carrito
+    document.getElementById('agregarProducto').addEventListener('click', function () {
+      // Aquí puedes agregar la lógica para agregar un producto al carrito
+      // Por ahora, solo actualizaremos el mensaje del carrito
+      document.getElementById('carritoMensaje').innerText = 'Producto añadido exitosamente.';
+    });
+  </script>
+</body>
+</html>
